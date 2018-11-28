@@ -98,7 +98,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
         my_turtle.left(twist)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -135,8 +135,15 @@ def try_methods():
       -- forward    50 units
       -- backward  100 units
     """
+    jakob = rg.SimpleTurtle('turtle')
+    jakob.pen = rg.Pen('brown',5)
+    jakob.pen_down()
+    jakob.forward(150)
+    jakob.left(90)
+    jakob.forward(50)
+    jakob.backward(100)
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE: 4. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
 
@@ -151,8 +158,11 @@ def try_functions():
      -- One jumps to (100, 200), then moves (while drawing) to (0, 0)
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
     ###########################################################################
-    # TODO: 5. Implement and test this function, per its doc-string above.
+    # DONE: 5. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -197,8 +207,25 @@ def try_methods_and_functions():
 
       8. Draw a SQUARE whose sides are each of length 50.
     """
+    jakob = rg.SimpleTurtle('turtle')
+    jakob.pen = rg.Pen('blue', 5)
+    jakob.pen_up()
+    jakob.backward(150)
+    jakob.speed = 1
+    jakob.pen_down()
+    draw_many_squares(jakob, 3, 100, 30)
+    jakob.speed = 5
+    jakob.pen = rg.Pen('red', 5)
+    draw_many_squares(jakob, 10, 50, 15)
+    jakob.speed = 100
+    jakob.pen = rg.Pen('red', 35)
+    draw_many_squares(jakob, 8, 300, 60)
+    jakob.pen = rg.Pen('black', 3)
+    jakob.backward(200)
+    jakob.draw_circle(30)
+    jakob.draw_square(50)
     ###########################################################################
-    # TODO: 6. Implement and test this function, per its doc-string above.
+    # DONE: 6. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #   NOTE: This function should ** CALL ** the
